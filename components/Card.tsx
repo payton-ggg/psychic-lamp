@@ -4,6 +4,32 @@ import styled from "styled-components";
 import React from "react";
 import { WeatherCardTypes } from "@/types";
 
+const WeatherCard = ({
+  temperature,
+  location,
+  humidity,
+  windSpeed,
+  condition,
+}: WeatherCardTypes) => {
+  return (
+    <CardContainer>
+      <Temperature>{temperature}°C</Temperature>
+      <Location>{location}</Location>
+      <Condition>{condition}</Condition>
+      <WeatherInfo>
+        <WeatherDetail>
+          <span>{humidity}%</span>
+          <span>Humidity</span>
+        </WeatherDetail>
+        <WeatherDetail>
+          <span>{windSpeed} km/h</span>
+          <span>Wind Speed</span>
+        </WeatherDetail>
+      </WeatherInfo>
+    </CardContainer>
+  );
+};
+
 const CardContainer = styled.div`
   background: linear-gradient(to right bottom, #87ceeb, #4682b4);
   border-radius: clamp(16px, 4vw, 20px);
@@ -77,31 +103,5 @@ const Condition = styled.div`
   margin: 0.5rem 0;
   opacity: 0.9;
 `;
-
-const WeatherCard = ({
-  temperature,
-  location,
-  humidity,
-  windSpeed,
-  condition,
-}: WeatherCardTypes) => {
-  return (
-    <CardContainer>
-      <Temperature>{temperature}°C</Temperature>
-      <Location>{location}</Location>
-      <Condition>{condition}</Condition>
-      <WeatherInfo>
-        <WeatherDetail>
-          <span>{humidity}%</span>
-          <span>Humidity</span>
-        </WeatherDetail>
-        <WeatherDetail>
-          <span>{windSpeed} km/h</span>
-          <span>Wind Speed</span>
-        </WeatherDetail>
-      </WeatherInfo>
-    </CardContainer>
-  );
-};
 
 export default WeatherCard;
