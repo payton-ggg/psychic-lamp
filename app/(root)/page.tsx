@@ -195,12 +195,11 @@ const SubmitButton = styled.button`
 
 const CardsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   width: 100%;
   margin: 3rem auto;
   padding: 0 1rem;
-
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;

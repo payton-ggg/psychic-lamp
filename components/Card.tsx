@@ -36,7 +36,7 @@ const CardContainer = styled.div`
   padding: clamp(1rem, 3vw, 2rem);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   color: white;
-  width: clamp(250px, 80vw, 350px);
+  width: clamp(200px, 80vw, 350px);
   transition: transform 0.2s ease;
   margin: 1rem;
 
@@ -47,7 +47,7 @@ const CardContainer = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 90vw;
+    width: 80vw;
     margin: 0.5rem;
   }
 `;
